@@ -10,6 +10,7 @@ public class Game : MonoBehaviour
     [SerializeField] int numFishToProgress;
     [SerializeField] GameObject player;
     [SerializeField] Spawner spawner;
+    [SerializeField] Text liveScoreCounter;
     [Header("All the attibutes to do with the zoom out feature")]
     [SerializeField] GameObject bottomRidge;
     [SerializeField] GameObject topRidge;    
@@ -79,6 +80,7 @@ public class Game : MonoBehaviour
     public void AddScore(int a_score)
     {
         currentScore += a_score;
+        liveScoreCounter.text = currentScore.ToString();
     }
     public void EatenFish()
     {
@@ -91,5 +93,6 @@ public class Game : MonoBehaviour
         gameOverScreen.SetActive(true);
         myScore.text = currentScore.ToString();
         highScore.text = gm.GetTopScore().ToString();
+        gm.SaveScore(currentScore);
     }
 }

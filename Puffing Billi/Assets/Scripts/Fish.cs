@@ -13,6 +13,7 @@ public class Fish : MonoBehaviour
 {
     [SerializeField] Size fishSize;
     [SerializeField] float leftwardSpeed = 10.0f;
+    [SerializeField] int scoreValue;
 
     // Use this for initialization
     void Start()
@@ -31,5 +32,9 @@ public class Fish : MonoBehaviour
     public Size GetSize()
     {
         return fishSize;
+    }
+    public int GetScoreValue()
+    {
+        return scoreValue;
     }
 }
