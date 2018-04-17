@@ -11,20 +11,21 @@ public enum Size
     SIZE_5
 }
 public class Fish : MonoBehaviour
-{  
+{
     [SerializeField] Size fishSize;
     [SerializeField] float leftwardSpeed = 10.0f;
-	// Use this for initialization
-	void Start ()
+
+    // Use this for initialization
+    void Start()
     {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
+
+    }
+
+    // Update is called once per frame
+    void Update()
     {
-        //transform.Translate(-Vector3.right * leftwardSpeed);
-	}
+        transform.Translate(Vector3.right * leftwardSpeed * Time.deltaTime);
+    }
 
     public Size GetSize()
     {
