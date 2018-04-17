@@ -13,7 +13,6 @@ public class Fish : MonoBehaviour
 {
     [SerializeField] Size fishSize;
     [SerializeField] float leftwardSpeed = 10.0f;
-    [SerializeField] float deathTimer;
 
     // Use this for initialization
     void Start()
@@ -26,7 +25,7 @@ public class Fish : MonoBehaviour
     {
         transform.Translate(Vector3.right * leftwardSpeed * Time.deltaTime);
 
-        Destroy(gameObject, deathTimer);
+        Destroy(gameObject, 10.0f);
     }
 
     public Size GetSize()
