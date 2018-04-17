@@ -35,6 +35,7 @@ public class Player : MonoBehaviour
         else if(other.gameObject.GetComponent<Fish>().GetSize() <= mySize)
         {
             game.EatenFish();
+            Destroy(other.gameObject);
         }
 
     }
