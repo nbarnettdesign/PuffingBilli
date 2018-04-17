@@ -28,11 +28,11 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.GetComponent<Fish>().GetSize() > mySize)
+        if(other.gameObject.GetComponent<Fish>().GetSize() > mySize)
         {
             game.PlayerKilled();
         }
-        else if(other.GetComponent<Fish>().GetSize() <= mySize)
+        else if(other.gameObject.GetComponent<Fish>().GetSize() <= mySize)
         {
             game.EatenFish();
         }

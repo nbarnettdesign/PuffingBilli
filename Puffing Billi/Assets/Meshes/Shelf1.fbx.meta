@@ -481,8 +481,14 @@ ModelImporter:
     400472: transform9
     2100000: lambert1
     2100002: Plant
+    2100004: DiscCoral
+    2100006: Shelf1_2
+    2100008: Pipes
+    2100010: Starfish
     2300000: Shelf1
+    2300002: //RootNode
     3300000: Shelf1
+    3300002: //RootNode
     4300000: Shelf1
     9500000: //RootNode
   externalObjects: {}

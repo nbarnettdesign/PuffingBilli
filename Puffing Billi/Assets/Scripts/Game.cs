@@ -56,7 +56,7 @@ public class Game : MonoBehaviour
                 level++;
                 playerSize = 0;
             }
-            player.GetComponent<Player>().SetSize(playerSize);
+    //        player.GetComponent<Player>().SetSize(playerSize);
         }
 	}
 
