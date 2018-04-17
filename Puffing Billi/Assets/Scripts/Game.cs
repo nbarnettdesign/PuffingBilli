@@ -9,6 +9,7 @@ public class Game : MonoBehaviour
     public static Game instance;
     [SerializeField] int numFishToProgress;
     [SerializeField] GameObject player;
+    [SerializeField] Spawner spawner;
     [Header("All the attibutes to do with the zoom out feature")]
     [SerializeField] GameObject bottomRidge;
     [SerializeField] GameObject topRidge;    
@@ -34,6 +35,7 @@ public class Game : MonoBehaviour
         {
             Destroy(this);
         }
+        Time.timeScale = 1.0f;
     }
     void Start ()
     {
@@ -47,16 +49,25 @@ public class Game : MonoBehaviour
     {
 	    if(numOfFishEaten >= numFishToProgress)
         {
-            playerSize++;
-            numOfFishEaten = 0;
-            if(playerSize == Size.SIZE_4)
+            if (playerSize == Size.SIZE_4)
             {
                 bottomRidge.transform.position = new Vector3(bottomRidge.transform.position.x, bottomRidge.transform.position.y, bottomRidge.transform.position.z + 1);
                 topRidge.transform.position = new Vector3(topRidge.transform.position.x, topRidge.transform.position.y, topRidge.transform.position.z - 1);
                 level++;
                 playerSize = 0;
+                spawner.PlayerGrew();
+                player.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
+
             }
-    //        player.GetComponent<Player>().SetSize(playerSize);
+            else
+            {
+                playerSize++;
+                player.transform.localScale = new Vector3(player.transform.localScale.x + 0.1f, player.transform.localScale.y + 0.1f, player.transform.localScale.z + 0.1f);
+                numOfFishEaten = 0;
+            }
+            
+            
+            player.GetComponent<Player>().SetSize(playerSize);
         }
 	}
 
