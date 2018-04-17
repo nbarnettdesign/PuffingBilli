@@ -18,10 +18,13 @@ public class Game : MonoBehaviour
     [SerializeField] GameObject gameOverScreen;
     [SerializeField] Text myScore;
     [SerializeField] Text highScore;
+    [Header("The 3 platforms to simulate depth")]
+    [SerializeField] GameObject[] platforms;
 
     private int currentScore = 0;
     private int numOfFishEaten = 0;
     private int level = 0;
+    private int platformNum = 0;
 
     private Size playerSize = 0;
 
@@ -50,7 +53,7 @@ public class Game : MonoBehaviour
     {
 	    if(numOfFishEaten >= numFishToProgress)
         {
-            if (playerSize == Size.SIZE_4)
+            if (playerSize == Size.SIZE_4 && level != 3)
             {
                 bottomRidge.transform.position = new Vector3(bottomRidge.transform.position.x, bottomRidge.transform.position.y, bottomRidge.transform.position.z + 1);
                 topRidge.transform.position = new Vector3(topRidge.transform.position.x, topRidge.transform.position.y, topRidge.transform.position.z - 1);
@@ -58,6 +61,8 @@ public class Game : MonoBehaviour
                 playerSize = 0;
                 spawner.PlayerGrew();
                 player.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
+                platforms[platformNum].SetActive(true);
+                platformNum++;
 
             }
             else
