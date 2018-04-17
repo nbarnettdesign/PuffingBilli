@@ -7,8 +7,7 @@ public enum Size
     SIZE_1,
     SIZE_2,
     SIZE_3,
-    SIZE_4,
-    SIZE_5
+    SIZE_4
 }
 public class Fish : MonoBehaviour
 {
