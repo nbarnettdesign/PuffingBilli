@@ -20,7 +20,6 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public event GameStateChange MenuState;
     public event GameStateChange GameState;
-    public event GameStateChange PreLoadState;
     [SerializeField] float[] scores;
     public bool scoresAvaliable = false;
     // Use this for initialization
@@ -100,7 +99,16 @@ public class GameManager : MonoBehaviour
     }
     public float GetTopScore()
     {
-        return scores[0];
+		try
+		{
+			return scores[0];
+		}
+		catch(Exception e)
+		{
+			return 0;
+		}
+		return 0;
+        
     }
     public void SetState(State a_state)
     {
@@ -117,7 +125,9 @@ public class GameManager : MonoBehaviour
         }
         if(a_state == State.PRELOAD)
         {
+			#if UNITY_EDITOR
             SceneManager.LoadScene(1);
+			#endif
         }
     }
 

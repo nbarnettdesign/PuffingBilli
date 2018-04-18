@@ -79,6 +79,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4218129154627268}
+  - component: {fileID: 114879377120201262}
+  - component: {fileID: 136679008656239140}
   m_Layer: 0
   m_Name: Turtle
   m_TagString: Untagged
@@ -248,22 +250,6 @@ GameObject:
   - component: {fileID: 4308024271383572}
   m_Layer: 0
   m_Name: turtle_:joint22
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1614267069055390
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4507013464134416}
-  - component: {fileID: 136413547879892314}
-  m_Layer: 0
-  m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -553,11 +539,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1151792649026158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.925761, y: 0.94, z: -0.20893544}
+  m_LocalPosition: {x: 4.4637156, y: 1.524, z: -0.8176336}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4725237757760354}
-  - {fileID: 4507013464134416}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -699,19 +684,6 @@ Transform:
   m_Father: {fileID: 4017597874181960}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4507013464134416
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1614267069055390}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.068, y: 0.055, z: -0.009}
-  m_LocalScale: {x: 3.5103784, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4218129154627268}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4527962053784060
 Transform:
   m_ObjectHideFlags: 1
@@ -813,17 +785,31 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!136 &136413547879892314
+--- !u!114 &114879377120201262
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1151792649026158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c62f398821e8924d8db39ae63ec23ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishSize: 3
+  leftwardSpeed: 2
+  scoreValue: 20
+--- !u!136 &136679008656239140
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1614267069055390}
+  m_GameObject: {fileID: 1151792649026158}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 1
-  m_Height: 1
+  m_Radius: 1.06
+  m_Height: 3.39
   m_Direction: 0
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!137 &137409306183231400

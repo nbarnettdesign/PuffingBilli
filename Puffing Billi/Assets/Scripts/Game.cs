@@ -71,6 +71,11 @@ public class Game : MonoBehaviour
                 player.transform.localScale = new Vector3(player.transform.localScale.x + 0.1f, player.transform.localScale.y + 0.1f, player.transform.localScale.z + 0.1f);
                 numOfFishEaten = 0;
             }
+			if(player.transform.localScale == new Vector3(1.65f, 1.65f, 1.65f))
+			{
+				Time.timeScale = 0.0f;
+				gameOverScreen.SetActive (true);
+			}
             
             
             player.GetComponent<Player>().SetSize(playerSize);

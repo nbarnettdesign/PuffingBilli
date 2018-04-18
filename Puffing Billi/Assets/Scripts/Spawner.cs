@@ -6,11 +6,8 @@ public class Spawner : MonoBehaviour
 {
     Vector3 position, maxSpawnPos, minSpawnPos;
     GameObject[] enemyPrefabs;
-
     [SerializeField]
     List<Transform> spawnPositions;
-
-    List<Transform> tempSpawnPositions;
 
     [SerializeField]
     private float spawnDelay;
@@ -46,13 +43,6 @@ public class Spawner : MonoBehaviour
         currentPool = 0;
         enemyPrefabs = wavesTypes[currentPool].enemyTypes;
         InvokeRepeating("SpawnFish", spawnDelay, 1);
-
-        tempSpawnPositions = new List<Transform>();
-
-        for (int i = 0; i < spawnPositions.Count; i++)
-        {
-            tempSpawnPositions.Add(spawnPositions[i]);
-        }
     }
 
 
@@ -60,27 +50,18 @@ public class Spawner : MonoBehaviour
     {
         for (int i = 0; i < spawnAmount; i++)
         {
-            int randIndex = Random.Range(0, tempSpawnPositions.Count);
-
-            Vector3 newPos = tempSpawnPositions[randIndex].position;
+            Vector3 newPos = spawnPositions[Random.Range(0, spawnPositions.Count)].position;
             Transform fish = Instantiate(enemyPrefabs[Random.Range(0, enemyPrefabs.Length)], newPos, Quaternion.identity).transform;
-            tempSpawnPositions.RemoveAt(randIndex);
 
             // they're on the left
             if (newPos.x < 0.0f)
             {
-               //do nothing
+               
             }
             else
             {
                 fish.Rotate(Vector3.up, 180);
             }
-        }
-
-        tempSpawnPositions.Clear();
-        for (int i = 0; i < spawnPositions.Count; i++)
-        {
-            tempSpawnPositions.Add(spawnPositions[i]);
         }
     }
 
@@ -92,7 +73,7 @@ public class Spawner : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log(Screen.currentResolution.height);
+        Debug.Log(Screen.currentResolution.height);
     }
 
     //Vector3 AvailablePosition(int a_enemy)

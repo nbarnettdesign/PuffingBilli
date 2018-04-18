@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 136284245128015240}
   - component: {fileID: 114013277770746512}
   m_Layer: 0
-  m_Name: Stingray
+  m_Name: Stingray 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -535,9 +535,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c62f398821e8924d8db39ae63ec23ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishSize: 2
-  leftwardSpeed: 3
-  scoreValue: 15
+  fishSize: 1
+  leftwardSpeed: 4
+  scoreValue: 10
 --- !u!136 &136284245128015240
 CapsuleCollider:
   m_ObjectHideFlags: 1

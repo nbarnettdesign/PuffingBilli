@@ -1,0 +1,292 @@
+fileFormatVersion: 2
+guid: 1d239800ea9756d428d57a35ae64e934
+timeCreated: 1524006862
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Bille
+    100002: Fins
+    100004: Fish_Body
+    100006: joint1
+    100008: joint2
+    100010: joint3
+    100012: joint4
+    100014: joint5
+    100016: polySurface1
+    100018: polySurface2
+    100020: polySurface5
+    100022: polySurface6
+    100024: Spine
+    100026: Spine1
+    100028: Spine10
+    100030: Spine11
+    100032: Spine13
+    100034: Spine14
+    100036: Spine15
+    100038: Spine16
+    100040: Spine17
+    100042: Spine18
+    100044: Spine19
+    100046: Spine2
+    100048: Spine2 1
+    100050: Spine20
+    100052: Spine21
+    100054: Spine22
+    100056: Spine23
+    100058: Spine24
+    100060: Spine25
+    100062: Spine26
+    100064: Spine27
+    100066: Spine28
+    100068: Spine29
+    100070: Spine3
+    100072: Spine30
+    100074: Spine31
+    100076: Spine32
+    100078: Spine4
+    100080: Spine5
+    100082: Spine6
+    100084: Spine7
+    100086: Spine8
+    100088: Spine9
+    100090: Spines
+    100092: //RootNode
+    100094: transform10
+    100096: transform11
+    100098: transform12
+    100100: transform13
+    100102: transform14
+    100104: transform15
+    100106: transform16
+    100108: transform17
+    100110: transform18
+    100112: transform19
+    100114: transform20
+    100116: transform21
+    100118: transform22
+    100120: transform23
+    100122: transform24
+    100124: transform25
+    100126: transform26
+    100128: transform27
+    100130: transform28
+    100132: transform29
+    100134: transform30
+    100136: transform31
+    100138: transform32
+    100140: transform33
+    100142: transform34
+    100144: transform35
+    100146: transform36
+    100148: transform37
+    100150: transform38
+    100152: transform39
+    100154: transform4
+    100156: transform40
+    100158: transform41
+    100160: transform42
+    100162: transform5
+    100164: transform6
+    100166: transform7
+    100168: transform8
+    100170: transform9
+    400000: Bille
+    400002: Fins
+    400004: Fish_Body
+    400006: joint1
+    400008: joint2
+    400010: joint3
+    400012: joint4
+    400014: joint5
+    400016: polySurface1
+    400018: polySurface2
+    400020: polySurface5
+    400022: polySurface6
+    400024: Spine
+    400026: Spine1
+    400028: Spine10
+    400030: Spine11
+    400032: Spine13
+    400034: Spine14
+    400036: Spine15
+    400038: Spine16
+    400040: Spine17
+    400042: Spine18
+    400044: Spine19
+    400046: Spine2
+    400048: Spine2 1
+    400050: Spine20
+    400052: Spine21
+    400054: Spine22
+    400056: Spine23
+    400058: Spine24
+    400060: Spine25
+    400062: Spine26
+    400064: Spine27
+    400066: Spine28
+    400068: Spine29
+    400070: Spine3
+    400072: Spine30
+    400074: Spine31
+    400076: Spine32
+    400078: Spine4
+    400080: Spine5
+    400082: Spine6
+    400084: Spine7
+    400086: Spine8
+    400088: Spine9
+    400090: Spines
+    400092: //RootNode
+    400094: transform10
+    400096: transform11
+    400098: transform12
+    400100: transform13
+    400102: transform14
+    400104: transform15
+    400106: transform16
+    400108: transform17
+    400110: transform18
+    400112: transform19
+    400114: transform20
+    400116: transform21
+    400118: transform22
+    400120: transform23
+    400122: transform24
+    400124: transform25
+    400126: transform26
+    400128: transform27
+    400130: transform28
+    400132: transform29
+    400134: transform30
+    400136: transform31
+    400138: transform32
+    400140: transform33
+    400142: transform34
+    400144: transform35
+    400146: transform36
+    400148: transform37
+    400150: transform38
+    400152: transform39
+    400154: transform4
+    400156: transform40
+    400158: transform41
+    400160: transform42
+    400162: transform5
+    400164: transform6
+    400166: transform7
+    400168: transform8
+    400170: transform9
+    2100000: lambert1
+    4300000: Bille
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Bille
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 192
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

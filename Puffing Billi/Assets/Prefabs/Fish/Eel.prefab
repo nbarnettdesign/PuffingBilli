@@ -50,6 +50,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4658934127374860}
   - component: {fileID: 114884709053323854}
+  - component: {fileID: 136057151304998676}
   m_Layer: 0
   m_Name: Eel
   m_TagString: Untagged
@@ -128,22 +129,6 @@ GameObject:
   - component: {fileID: 4312304536724500}
   m_Layer: 0
   m_Name: snale2:joint18
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1584980217316240
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4884845487913608}
-  - component: {fileID: 136298382070446220}
-  m_Layer: 0
-  m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -430,11 +415,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1321172667115532}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.35043108, y: 1.729, z: 1.0873144}
+  m_LocalPosition: {x: 6.364811, y: 0.55, z: -0.87008345}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4025114933742974}
-  - {fileID: 4884845487913608}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -465,19 +449,6 @@ Transform:
   - {fileID: 4066199028999850}
   m_Father: {fileID: 4275187500527762}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4884845487913608
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1584980217316240}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.107, y: 0.035, z: 0.014}
-  m_LocalScale: {x: 2.0543444, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4658934127374860}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4903750759411254
 Transform:
@@ -535,19 +506,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c62f398821e8924d8db39ae63ec23ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishSize: 0
-  leftwardSpeed: 10
---- !u!136 &136298382070446220
+  fishSize: 1
+  leftwardSpeed: 4
+  scoreValue: 10
+--- !u!136 &136057151304998676
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1584980217316240}
+  m_GameObject: {fileID: 1321172667115532}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.1
-  m_Height: 1
+  m_Height: 1.91
   m_Direction: 0
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!137 &137601332349719344

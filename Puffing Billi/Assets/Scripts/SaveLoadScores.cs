@@ -10,8 +10,11 @@ public static class SaveLoadScores
     static string fileLocation = "Assets/Resources/scores.bytes";
     public static void SaveScore(float score, TextAsset file)
     {
-        string previousItems = File.ReadAllText(fileLocation);
-        File.WriteAllText(fileLocation, previousItems + "\r\n" + score.ToString());
+		if (score != 0)
+		{
+			string previousItems = File.ReadAllText (fileLocation);
+			File.WriteAllText (fileLocation, previousItems + "\r\n" + score.ToString ());
+		}
     }
     public static float[] LoadScores()
     {
@@ -37,6 +40,13 @@ public static class SaveLoadScores
                 saveNumber = false;
                 score = "";
             }
+			if(c == loadScores[loadScores.Length - 1])
+			{
+				scores[scoresLocation] = float.Parse(score);
+				scoresLocation++;
+				saveNumber = false;
+				score = "";
+			}
             saveNumber = false;
         }
         return scores;
