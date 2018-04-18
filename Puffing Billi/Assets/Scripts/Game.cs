@@ -40,12 +40,14 @@ public class Game : MonoBehaviour
             Destroy(this);
         }
         Time.timeScale = 1.0f;
+
     }
     void Start ()
     {
         gm = GameManager.instance;
         gm.GameState += SetupScene;
         gm.SetState(State.GAME);
+		highScore.text = gm.GetTopScore ().ToString();
     }
 	
 	// Update is called once per frame
@@ -100,9 +102,11 @@ public class Game : MonoBehaviour
     public void PlayerKilled()
     {
         Time.timeScale = 0.0f;
+		gm.SaveScore(currentScore);
+		gm.ReloadScores ();
         gameOverScreen.SetActive(true);
         myScore.text = currentScore.ToString();
         highScore.text = gm.GetTopScore().ToString();
-        gm.SaveScore(currentScore);
+        
     }
 }

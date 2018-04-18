@@ -1,17 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
 using System.IO;
 
 
 public static class SaveLoadScores
 {
-    static string fileLocation = "Assets/Resources/scores.bytes";
+    static string fileLocation = Application.persistentDataPath + "/scores.bytes";
     public static void SaveScore(float score, TextAsset file)
     {
-		if (score != 0)
-		{
+		if (score != 0) {
 			string previousItems = File.ReadAllText (fileLocation);
 			File.WriteAllText (fileLocation, previousItems + "\r\n" + score.ToString ());
 		}

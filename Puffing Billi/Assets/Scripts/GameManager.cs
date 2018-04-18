@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
 using System;
 using System.IO;
 using UnityEngine.SceneManagement;
@@ -12,7 +11,6 @@ public enum State
     MENU,
     GAME
 }
-
 public delegate void GameStateChange();
 public class GameManager : MonoBehaviour
 {
@@ -22,9 +20,11 @@ public class GameManager : MonoBehaviour
     public event GameStateChange GameState;
     [SerializeField] float[] scores;
     public bool scoresAvaliable = false;
+    [SerializeField] string path;
     // Use this for initialization
     void Awake()
     {
+        path = Application.persistentDataPath;
         if (instance == null)
         {
             instance = this;
@@ -35,10 +35,9 @@ public class GameManager : MonoBehaviour
         }
         try
         {
-            file = (TextAsset)AssetDatabase.LoadAssetAtPath("Assets/Resources/scores.bytes", typeof(TextAsset));
-            if (file == null)
+            if (!File.Exists(path + "/scores.bytes"))
             {
-                File.Create("Assets/Resources/scores.bytes");
+                File.Create(path + "/scores.bytes");
                 //file = (TextAsset)AssetDatabase.LoadAssetAtPath("Assets/Resources/scores.bytes", typeof(TextAsset));
                 scoresAvaliable = false;
             }
@@ -99,16 +98,7 @@ public class GameManager : MonoBehaviour
     }
     public float GetTopScore()
     {
-		try
-		{
-			return scores[0];
-		}
-		catch(Exception e)
-		{
-			return 0;
-		}
-		return 0;
-        
+        return scores[0];
     }
     public void SetState(State a_state)
     {
@@ -125,10 +115,14 @@ public class GameManager : MonoBehaviour
         }
         if(a_state == State.PRELOAD)
         {
-			#if UNITY_EDITOR
             SceneManager.LoadScene(1);
-			#endif
         }
     }
+	public void ReloadScores()
+	{
+		scores = SaveLoadScores.LoadScores ();
+		ThinScoresArray ();
+		SortScoreArray ();
+	}
 
 }
